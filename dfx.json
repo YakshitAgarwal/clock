@@ -1,0 +1,26 @@
+{
+  "canisters": {
+    "clock_backend": {
+      "main": "src/clock_backend/main.mo",
+      "type": "motoko"
+    },
+    "clock_frontend": {
+      "dependencies": [
+        "clock_backend"
+      ],
+      "source": [
+        "src/clock_frontend/dist"
+      ],
+      "type": "assets",
+      "workspace": "clock_frontend"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
